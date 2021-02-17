@@ -5,9 +5,7 @@ const FirstSection = ({ reciveResponse, name, questions, saveQuestion, style }) 
   const [input, setInput] = useState("");
   const [negative, setNegative] = useState(0);
   useEffect(() => {
-    if (negative < 2) {
-      textInput.current.focus();
-    }
+    textInput.current.focus();
   });
   const question = [
     "Nice to meet you " + name + ". Do you want to see my recent project?",
@@ -44,9 +42,6 @@ const FirstSection = ({ reciveResponse, name, questions, saveQuestion, style }) 
             onChange={(e) => setInput(e.target.value)}
             value={input}
             onKeyPress={(event) => (event.key === "Enter" ? saveInput() : null)}
-            onKeyDown={(event) => {
-              event.preventDefault();
-            }}
           ></input>
 
           {input.length >= 1 ? (
