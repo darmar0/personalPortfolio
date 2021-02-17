@@ -5,8 +5,9 @@ const ThirdSection = ({ reciveResponse, name, saveQuestion, questions, style }) 
   const [input, setInput] = useState("");
   const [negative, setNegative] = useState(0);
   useEffect(() => {
-    if (negative < 1) {
-      textInput.current.focus();
+    if (negative < 2) {
+      const timer = setTimeout(() => textInput.current.focus(), 15000);
+      return () => clearTimeout(timer);
     }
   });
   const question = [

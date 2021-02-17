@@ -3,7 +3,12 @@ import React, { useState, useEffect, useRef } from "react";
 const Intro = ({ saveName, saveQuestion }) => {
   const textInput = useRef(null);
   const [input, setInput] = useState("");
+  const [inputWidth, setStyle] = useState(0);
   useEffect(() => {
+    while (inputWidth < 50) {
+      const intervalId = setInterval(() => setStyle(inputWidth + 2), 10);
+      return () => clearInterval(intervalId);
+    }
     textInput.current.focus();
   });
   const question = "Hello. My name is Darijan. What’s your name?";
@@ -12,7 +17,7 @@ const Intro = ({ saveName, saveQuestion }) => {
     saveQuestion(question);
     setInput("");
   };
-
+  const style = { width: inputWidth + "%" };
   return (
     <>
       <div className="text-area">
@@ -20,6 +25,7 @@ const Intro = ({ saveName, saveQuestion }) => {
       </div>
 
       <input
+        style={style}
         ref={textInput}
         type="text"
         className="console-input"

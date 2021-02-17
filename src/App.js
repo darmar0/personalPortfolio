@@ -21,9 +21,7 @@ const App = () => {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-lg-4 ">
-          <Terminal name={name} />
-        </div>
+        <div className="col-lg-4 "></div>
         <div style={style} className="col-lg-4  console">
           <Console sendName={sendName} responsive={responsive} />
         </div>
