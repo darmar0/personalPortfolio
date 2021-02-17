@@ -145,20 +145,23 @@ input:focus {
 
 @media screen and (max-width: 375px) {
   .console {
-    font-size: 14px;
+    font-size: 19px;
   }
   .consoleWrap {
-    padding: 0 10% 0 10%;
+    padding: 0 1% 0 1%;
   }
 
   .content {
-    padding: 0 10% 0 10%;
+    padding: 0 1% 0 1%;
   }
   .history {
-    max-width: 80vw;
+    max-width: 97vw;
+  }
+  .submit {
+    display: none;
   }
 }
-
+/*
 @media screen and (max-width: 360px) {
   .console {
     font-size: 12px;
@@ -173,4 +176,4 @@ input:focus {
   .history {
     max-width: 82vw;
   }
-}
+}*/
