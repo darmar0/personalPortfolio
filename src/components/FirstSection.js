@@ -11,6 +11,7 @@ const FirstSection = ({ reciveResponse, name, questions, saveQuestion, style }) 
     "Nice to meet you " + name + ". Do you want to see my recent project?",
     "" + name + ", I would really like to show you my work. Can I?",
     "That's ok  " + name + ", thank you for visiting my website.",
+    "Oops  " + name + ", jebiga sad.",
   ];
   const saveInput = () => {
     if (input.toUpperCase() === "YES") {
@@ -18,7 +19,7 @@ const FirstSection = ({ reciveResponse, name, questions, saveQuestion, style }) 
     } else if (input.toUpperCase() === "NO") {
       setNegative(negative + 1);
     } else {
-      return null;
+      setNegative(3);
     }
     setInput("");
     saveQuestion(question[negative]);
