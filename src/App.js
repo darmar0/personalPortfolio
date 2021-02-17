@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Console from "./components/console.js";
+import Terminal from "./components/terminal.js";
+export const NameContext = React.createContext();
 
-function App() {
+const App = () => {
+  const [name, setName] = useState();
+  const [contentHeight, setHeight] = useState();
+  const sendName = (newName) => {
+    setName(newName);
+  };
+
+  const responsive = (containerHeight) => {
+    const height = (window.innerHeight - containerHeight) / 2.5;
+    setHeight(height);
+  };
+  const style = {
+    paddingTop: contentHeight,
+  };
+  console.log();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-lg-4 ">
+          <Terminal name={name} />
+        </div>
+        <div style={style} className="col-lg-4  console">
+          <Console sendName={sendName} responsive={responsive} />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
