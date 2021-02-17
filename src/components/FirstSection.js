@@ -44,6 +44,9 @@ const FirstSection = ({ reciveResponse, name, questions, saveQuestion, style }) 
             onChange={(e) => setInput(e.target.value)}
             value={input}
             onKeyPress={(event) => (event.key === "Enter" ? saveInput() : null)}
+            onKeyDown={(event) => {
+              event.preventDefault();
+            }}
           ></input>
 
           {input.length >= 1 ? (
