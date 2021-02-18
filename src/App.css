@@ -9,12 +9,12 @@ body {
 }
 
 .consoleWrap {
-  padding: 0 19% 0 19%;
+  padding: 0 18% 0 18%;
   text-align: justify;
 }
 
 .content {
-  padding: 0 19% 0 19%;
+  padding: 0 18% 0 18%;
   text-align: justify;
   margin-bottom: 2%;
 }
@@ -38,7 +38,8 @@ input:focus {
   margin-left: 10%;
 }
 .submit:hover {
-  color: red;
+  color: #007bff;
+  cursor: pointer;
 }
 .history {
   position: absolute;
@@ -52,22 +53,6 @@ input:focus {
     font-size: 17px;
   }
   .consoleWrap {
-    padding: 0 15% 0 15%;
-  }
-
-  .content {
-    padding: 0 15% 0 15%;
-  }
-  .history {
-    max-width: 24vw;
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .console {
-    font-size: 16px;
-  }
-  .consoleWrap {
     padding: 0 13% 0 13%;
   }
 
@@ -76,6 +61,22 @@ input:focus {
   }
   .history {
     max-width: 25vw;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .console {
+    font-size: 16px;
+  }
+  .consoleWrap {
+    padding: 0 10% 0 10%;
+  }
+
+  .content {
+    padding: 0 10% 0 10%;
+  }
+  .history {
+    max-width: 27vw;
   }
 }
 
@@ -91,7 +92,7 @@ input:focus {
     padding: 0 0 0 0;
   }
   .history {
-    max-width: 32vw;
+    max-width: 33vw;
   }
 }
 
@@ -147,20 +148,20 @@ input:focus {
 
 @media screen and (max-width: 375px) {
   .console {
-    font-size: 17px;
-    margin-top: 5%;
+    font-size: 15px;
+    /*margin-top: 5%;*/
   }
   .consoleWrap {
-    padding: 0 1% 0 1%;
+    padding: 0 4% 0 4%;
   }
 
   .content {
-    padding: 0 1% 0 1%;
+    padding: 0 4% 0 4%;
+    font-size: 14px;
   }
   .history {
-    max-width: 98vw;
+    max-width: 92vw;
   }
   .submit {
-    display: none;
   }
 }

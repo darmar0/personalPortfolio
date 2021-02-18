@@ -14,9 +14,14 @@ const Console = ({ sendName, responsive }) => {
   const [respond, setRespond] = useState([]);
   const [questions, setQuestions] = useState([]);
   const [containerHeight, setHeight] = useState(0);
+
   useEffect(() => {
-    const height = document.getElementById("content").clientHeight + document.getElementById("console").clientHeight - 25;
+    const consoleHeight = document.getElementById("console").clientHeight;
+    const contentHeight = document.getElementById("content").clientHeight;
+    const height = consoleHeight + contentHeight - 25;
+
     setHeight(height);
+
     responsive(containerHeight);
   });
   const saveName = (input) => {

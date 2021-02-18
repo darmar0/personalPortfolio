@@ -9,7 +9,7 @@ const ForthSection = ({ name, questions, style }) => {
         </div>
       </div>
       <div className="text-area">
-        <p> {name}, thank you for visiting my website. I hope you enjoyed.</p>
+        <p> {name}, thank you for visiting. I hope you enjoyed.</p>
       </div>
     </>
   );
