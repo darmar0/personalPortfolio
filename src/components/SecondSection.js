@@ -6,7 +6,7 @@ const SecondSection = ({ reciveResponse, name, saveQuestion, questions, style })
   const [negative, setNegative] = useState(0);
   useEffect(() => {
     if (negative < 2) {
-      const timer = setTimeout(() => textInput.current.focus(), 15000);
+      const timer = window.innerWidth < 500 ? setTimeout(() => textInput.current.focus(), 15000) : textInput.current.focus();
       return () => clearTimeout(timer);
     }
   });

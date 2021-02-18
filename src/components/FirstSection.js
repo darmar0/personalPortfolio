@@ -26,7 +26,7 @@ const FirstSection = ({ reciveResponse, name, questions, saveQuestion, style }) 
     setInput("");
     saveQuestion(question[negative]);
   };
-  console.log(negative);
+
   return (
     <>
       {negative < 1 ? (

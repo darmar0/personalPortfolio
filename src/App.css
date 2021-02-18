@@ -9,13 +9,14 @@ body {
 }
 
 .consoleWrap {
-  padding: 0 20% 0 20%;
+  padding: 0 19% 0 19%;
   text-align: justify;
 }
 
 .content {
-  padding: 0 20% 0 20%;
+  padding: 0 19% 0 19%;
   text-align: justify;
+  margin-bottom: 2%;
 }
 .content a {
   text-decoration: none;
@@ -41,7 +42,7 @@ input:focus {
 }
 .history {
   position: absolute;
-  max-width: 20vw;
+  max-width: 21vw;
   filter: blur(1px);
   opacity: 0.5;
 }
@@ -96,17 +97,17 @@ input:focus {
 
 @media screen and (max-width: 768px) {
   .console {
-    font-size: 16px;
+    font-size: 18px;
   }
   .consoleWrap {
-    padding: 0 25% 0 25%;
+    padding: 0 19% 0 19%;
   }
 
   .content {
-    padding: 0 25% 0 25%;
+    padding: 0 19% 0 19%;
   }
   .history {
-    max-width: 50vw;
+    max-width: 61vw;
   }
   .submit {
     margin-left: 15%;
@@ -129,23 +130,25 @@ input:focus {
 }
 @media screen and (max-width: 415px) {
   .console {
-    font-size: 14px;
+    font-size: 17px;
+    margin-top: 3%;
   }
   .consoleWrap {
-    padding: 0 10% 0 10%;
+    padding: 0 6% 0 6%;
   }
 
   .content {
-    padding: 0 10% 0 10%;
+    padding: 0 6% 0 6%;
   }
   .history {
-    max-width: 80vw;
+    max-width: 86vw;
   }
 }
 
 @media screen and (max-width: 375px) {
   .console {
-    font-size: 19px;
+    font-size: 17px;
+    margin-top: 5%;
   }
   .consoleWrap {
     padding: 0 1% 0 1%;
@@ -155,25 +158,9 @@ input:focus {
     padding: 0 1% 0 1%;
   }
   .history {
-    max-width: 97vw;
+    max-width: 98vw;
   }
   .submit {
     display: none;
   }
 }
-/*
-@media screen and (max-width: 360px) {
-  .console {
-    font-size: 12px;
-  }
-  .consoleWrap {
-    padding: 0 2% 0 2%;
-  }
-
-  .content {
-    padding: 0 2% 0 2%;
-  }
-  .history {
-    max-width: 82vw;
-  }
-}*/

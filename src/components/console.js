@@ -15,7 +15,7 @@ const Console = ({ sendName, responsive }) => {
   const [questions, setQuestions] = useState([]);
   const [containerHeight, setHeight] = useState(0);
   useEffect(() => {
-    const height = document.getElementById("content").clientHeight + document.getElementById("console").clientHeight;
+    const height = document.getElementById("content").clientHeight + document.getElementById("console").clientHeight - 25;
     setHeight(height);
     responsive(containerHeight);
   });
@@ -40,8 +40,8 @@ const Console = ({ sendName, responsive }) => {
 
   return (
     <>
-      <div className="row mt-3">
-        <div id="content" className="col-12 content">
+      <div className="row">
+        <div id="content" className="col-12  content">
           {index > 1 && index !== 0 ? (
             <hr
               style={{
@@ -64,7 +64,7 @@ const Console = ({ sendName, responsive }) => {
         </div>
       </div>
       <div className="row">
-        <div id="console" className="col-12  mt-4 consoleWrap">
+        <div id="console" className="col-12 consoleWrap">
           {index === 0 ? <Intro saveName={saveName} saveQuestion={saveQuestion} style={style} /> : null}
           {index === 1 ? (
             <FirstSection
