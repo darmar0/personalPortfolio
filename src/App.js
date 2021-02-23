@@ -11,14 +11,13 @@ const App = () => {
   };
 
   const responsive = (containerHeight) => {
-    console.log(containerHeight);
     const height = (window.innerHeight - containerHeight) / 2.8;
     setHeight(height);
   };
   const style = {
     marginTop: contentHeight,
   };
-  console.log(contentHeight);
+
   return (
     <div className="container">
       <div style={style} className="console">
