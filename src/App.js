@@ -11,7 +11,7 @@ const App = () => {
   };
 
   const responsive = (containerHeight) => {
-    const height = (window.innerHeight - containerHeight) / 2.8;
+    const height = window.innerWidth > 500 ? (window.innerHeight - containerHeight) / 2.8 : (window.innerHeight - containerHeight) / 2;
     setHeight(height);
   };
   const style = {
