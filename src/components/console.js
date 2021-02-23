@@ -18,7 +18,7 @@ const Console = ({ sendName, responsive }) => {
   useEffect(() => {
     const consoleHeight = document.getElementById("console").clientHeight;
     const contentHeight = document.getElementById("content").clientHeight;
-    const height = consoleHeight + contentHeight - 25;
+    const height = consoleHeight + contentHeight;
 
     setHeight(height);
 
@@ -41,65 +41,42 @@ const Console = ({ sendName, responsive }) => {
   const saveQuestion = (newQuestion) => {
     setQuestions([...questions, newQuestion]);
   };
-  const style = { marginTop: parseInt("-" + containerHeight) };
 
   return (
     <>
-      <div className="row">
-        <div id="content" className="col-12  content">
-          {index > 1 && index !== 0 ? (
-            <hr
-              style={{
-                border: "1px solid black",
-                width: "100%",
-              }}
-            />
-          ) : null}
-          {respond[index - 2] === "YES" && !respond[index - 3] ? <Works /> : null}
-          {respond[index - 3] === "YES" && !respond[index - 4] ? <About /> : null}
-          {respond[index - 4] === "YES" && !respond[index - 5] ? <Contact /> : null}
-          {index > 1 && index !== 0 ? (
-            <hr
-              style={{
-                border: "1px solid black",
-                width: "100%",
-              }}
-            />
-          ) : null}
+      <div className="history">
+        <div className="text-area">
+          <p>{questions[questions.length - 1]}</p>
         </div>
       </div>
-      <div className="row">
-        <div id="console" className="col-12 consoleWrap">
-          {index === 0 ? <Intro saveName={saveName} saveQuestion={saveQuestion} style={style} /> : null}
-          {index === 1 ? (
-            <FirstSection
-              name={name}
-              reciveResponse={reciveResponse}
-              saveQuestion={saveQuestion}
-              questions={questions}
-              style={style}
-            />
-          ) : null}
-          {index === 2 ? (
-            <SecondSection
-              name={name}
-              reciveResponse={reciveResponse}
-              saveQuestion={saveQuestion}
-              questions={questions}
-              style={style}
-            />
-          ) : null}
-          {index === 3 ? (
-            <ThirdSection
-              name={name}
-              reciveResponse={reciveResponse}
-              saveQuestion={saveQuestion}
-              questions={questions}
-              style={style}
-            />
-          ) : null}
-          {index === 4 ? <ForthSection name={name} questions={questions} style={style} /> : null}
-        </div>
+      <div id="content" className="content">
+        {index > 1 && index !== 0 ? (
+          <hr
+            style={{
+              border: "1px solid black",
+              width: "100%",
+            }}
+          />
+        ) : null}
+        {respond[index - 2] === "YES" && !respond[index - 3] ? <Works /> : null}
+        {respond[index - 3] === "YES" && !respond[index - 4] ? <About /> : null}
+        {respond[index - 4] === "YES" && !respond[index - 5] ? <Contact /> : null}
+        {index > 1 && index !== 0 ? (
+          <hr
+            style={{
+              border: "1px solid black",
+              width: "100%",
+            }}
+          />
+        ) : null}
+      </div>
+
+      <div id="console" className="consoleWrap">
+        {index === 0 ? <Intro saveName={saveName} saveQuestion={saveQuestion} /> : null}
+        {index === 1 ? <FirstSection name={name} reciveResponse={reciveResponse} saveQuestion={saveQuestion} /> : null}
+        {index === 2 ? <SecondSection name={name} reciveResponse={reciveResponse} saveQuestion={saveQuestion} /> : null}
+        {index === 3 ? <ThirdSection name={name} reciveResponse={reciveResponse} saveQuestion={saveQuestion} /> : null}
+        {index === 4 ? <ForthSection name={name} /> : null}
       </div>
     </>
   );

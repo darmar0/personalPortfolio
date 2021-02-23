@@ -3,21 +3,26 @@ body {
   font-family: "Space Mono", monospace;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+}
 .console {
+  flex-basis: 33%;
   font-size: 19px;
   color: #555555;
 }
-
-.consoleWrap {
-  padding: 0 18% 0 18%;
-  text-align: justify;
+.history {
+  filter: blur(1px);
+  opacity: 0.5;
+  margin-bottom: 5%;
 }
-
 .content {
-  padding: 0 18% 0 18%;
-  text-align: justify;
-  margin-bottom: 2%;
+  margin-bottom: 5%;
 }
+.consoleWrap {
+}
+
 .content a {
   text-decoration: none;
 }
@@ -27,6 +32,8 @@ body {
   border-top: 0;
   border-bottom: 1px solid #555555;
   background-color: #f5f5f5;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 textarea:focus,
@@ -41,26 +48,10 @@ input:focus {
   color: #007bff;
   cursor: pointer;
 }
-.history {
-  position: absolute;
-  max-width: 21vw;
-  filter: blur(1px);
-  opacity: 0.5;
-}
 
 @media screen and (max-width: 1440px) {
   .console {
     font-size: 17px;
-  }
-  .consoleWrap {
-    padding: 0 13% 0 13%;
-  }
-
-  .content {
-    padding: 0 13% 0 13%;
-  }
-  .history {
-    max-width: 25vw;
   }
 }
 
@@ -68,48 +59,21 @@ input:focus {
   .console {
     font-size: 16px;
   }
-  .consoleWrap {
-    padding: 0 10% 0 10%;
-  }
-
-  .content {
-    padding: 0 10% 0 10%;
-  }
-  .history {
-    max-width: 27vw;
-  }
 }
 
 @media screen and (max-width: 1024px) {
   .console {
     font-size: 16px;
-  }
-  .consoleWrap {
-    padding: 0 0 0 0;
-  }
-
-  .content {
-    padding: 0 0 0 0;
-  }
-  .history {
-    max-width: 33vw;
+    flex-basis: 45%;
   }
 }
 
 @media screen and (max-width: 768px) {
   .console {
     font-size: 18px;
-  }
-  .consoleWrap {
-    padding: 0 19% 0 19%;
+    flex-basis: 56%;
   }
 
-  .content {
-    padding: 0 19% 0 19%;
-  }
-  .history {
-    max-width: 61vw;
-  }
   .submit {
     margin-left: 15%;
   }
@@ -117,51 +81,41 @@ input:focus {
 @media screen and (max-width: 540px) {
   .console {
     font-size: 14px;
-  }
-  .consoleWrap {
-    padding: 0 22% 0 22%;
-  }
-
-  .content {
-    padding: 0 22% 0 22%;
-  }
-  .history {
-    max-width: 55vw;
+    flex-basis: 70%;
   }
 }
+
 @media screen and (max-width: 415px) {
   .console {
-    font-size: 17px;
-    margin-top: 3%;
-  }
-  .consoleWrap {
-    padding: 0 6% 0 6%;
-  }
-
-  .content {
-    padding: 0 6% 0 6%;
-  }
-  .history {
-    max-width: 86vw;
+    font-size: 16px;
+    flex-basis: 87%;
   }
 }
 
 @media screen and (max-width: 375px) {
   .console {
     font-size: 15px;
-    /*margin-top: 5%;*/
-  }
-  .consoleWrap {
-    padding: 0 4% 0 4%;
+    flex-basis: 94%;
   }
 
   .content {
-    padding: 0 4% 0 4%;
     font-size: 14px;
   }
-  .history {
-    max-width: 92vw;
+  .submit {
+    margin-left: 20%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .console {
+    font-size: 13px;
+    flex-basis: 95%;
+  }
+
+  .content {
+    font-size: 12px;
   }
   .submit {
+    margin-left: 15%;
   }
 }

@@ -30,11 +30,6 @@ const ThirdSection = ({ reciveResponse, name, saveQuestion, questions, style }) 
     <>
       {negative < 1 ? (
         <>
-          <div style={style} className="history">
-            <div className="text-area">
-              <p>{questions[questions.length - 1]}</p>
-            </div>
-          </div>
           <div className="text-area">
             <p> {question[0]}</p>
           </div>
@@ -54,22 +49,12 @@ const ThirdSection = ({ reciveResponse, name, saveQuestion, questions, style }) 
         </>
       ) : negative === 1 ? (
         <>
-          <div style={style} className="history">
-            <div className="text-area">
-              <p>{questions[questions.length - 1]}</p>
-            </div>
-          </div>
           <div className="text-area">
             <p>{question[1]}</p>
           </div>
         </>
       ) : (
         <>
-          <div style={style} className="history">
-            <div className="text-area">
-              <p>{questions[questions.length - 1]}</p>
-            </div>
-          </div>
           <div className="text-area">
             <p>{question[2]}</p>
           </div>

@@ -11,20 +11,18 @@ const App = () => {
   };
 
   const responsive = (containerHeight) => {
-    const height = (window.innerHeight - containerHeight) / 2.2;
+    console.log(containerHeight);
+    const height = (window.innerHeight - containerHeight) / 2.8;
     setHeight(height);
   };
   const style = {
-    paddingTop: contentHeight,
+    marginTop: contentHeight,
   };
-  console.log();
+  console.log(contentHeight);
   return (
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-lg-4 "></div>
-        <div style={style} className="col-lg-4  console">
-          <Console sendName={sendName} responsive={responsive} />
-        </div>
+    <div className="container">
+      <div style={style} className="console">
+        <Console sendName={sendName} responsive={responsive} />
       </div>
     </div>
   );
