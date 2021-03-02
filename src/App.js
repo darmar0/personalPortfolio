@@ -4,11 +4,7 @@ import Terminal from "./components/terminal.js";
 export const NameContext = React.createContext();
 
 const App = () => {
-  const [name, setName] = useState();
   const [contentHeight, setHeight] = useState();
-  const sendName = (newName) => {
-    setName(newName);
-  };
 
   const responsive = (containerHeight) => {
     const height =
@@ -20,13 +16,13 @@ const App = () => {
     setHeight(height);
   };
   const style = {
-    marginTop: contentHeight,
+    marginTop: contentHeight * (100 / window.innerHeight) + "vh",
   };
 
   return (
     <div className="container">
       <div style={style} className="console">
-        <Console sendName={sendName} responsive={responsive} />
+        <Console responsive={responsive} />
       </div>
     </div>
   );

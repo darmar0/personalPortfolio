@@ -8,12 +8,18 @@ import SecondSection from "./SecondSection.js";
 import ThirdSection from "./ThirdSection.js";
 import ForthSection from "./ForthSection.js";
 
-const Console = ({ sendName, responsive }) => {
+const Console = ({ responsive, t0 }) => {
   const [name, setName] = useState("");
   const [index, nextIndex] = useState(0);
   const [respond, setRespond] = useState([]);
   const [questions, setQuestions] = useState([]);
   const [containerHeight, setHeight] = useState(0);
+  const [start, setStart] = useState([]);
+  useEffect(() => {
+    const millis = new Date().getTime();
+    const time = new Date().toLocaleTimeString();
+    setStart([...start, millis, time]);
+  }, []);
 
   useEffect(() => {
     const consoleHeight = document.getElementById("console").clientHeight;
@@ -24,13 +30,13 @@ const Console = ({ sendName, responsive }) => {
 
     responsive(containerHeight);
   });
+
   const saveName = (input) => {
     let firstLetterUperCase = input.split("")[0].toUpperCase();
     let updatedInput = input.split("");
     updatedInput.splice(0, 1, firstLetterUperCase);
     setName(updatedInput.join(""));
     nextIndex(index + 1);
-    sendName(updatedInput.join(""));
   };
 
   const reciveResponse = (input) => {
@@ -76,7 +82,7 @@ const Console = ({ sendName, responsive }) => {
         {index === 1 ? <FirstSection name={name} reciveResponse={reciveResponse} saveQuestion={saveQuestion} /> : null}
         {index === 2 ? <SecondSection name={name} reciveResponse={reciveResponse} saveQuestion={saveQuestion} /> : null}
         {index === 3 ? <ThirdSection name={name} reciveResponse={reciveResponse} saveQuestion={saveQuestion} /> : null}
-        {index === 4 ? <ForthSection name={name} /> : null}
+        {index === 4 ? <ForthSection name={name} start={start} /> : null}
       </div>
     </>
   );
