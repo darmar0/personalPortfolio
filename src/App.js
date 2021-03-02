@@ -7,16 +7,12 @@ const App = () => {
   const [contentHeight, setHeight] = useState();
 
   const responsive = (containerHeight) => {
-    const height =
-      window.innerWidth > 500
-        ? (window.innerHeight - containerHeight) / 2.8
-        : containerHeight > 300
-        ? (window.innerHeight - containerHeight) / 1.5
-        : (window.innerHeight - containerHeight) / 2.2;
+    console.log(containerHeight);
+    const height = containerHeight < 110 ? "25%" : "8%";
     setHeight(height);
   };
   const style = {
-    marginTop: contentHeight * (100 / window.innerHeight) + "vh",
+    marginTop: contentHeight,
   };
 
   return (
