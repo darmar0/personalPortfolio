@@ -25,6 +25,24 @@ body {
 .content a {
   text-decoration: none;
 }
+.linkContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+.links {
+  flex: 2 0 50%;
+}
+.previousProject p {
+  color: #0d6efd;
+}
+.previousProject p:hover {
+  cursor: pointer;
+}
+.previousProject p:active {
+  color: red;
+}
+
 .console-input {
   border-left: 0;
   border-right: 0;

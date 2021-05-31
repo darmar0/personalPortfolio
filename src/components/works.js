@@ -1,20 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Works = () => {
+  const [previous, setPrevious] = useState(0);
+
   return (
     <>
-      <h3>iTrade</h3>
-      <p>
-        Simple web app that could replace docs like Word, Excel, Numbers, etc., and serve the small business with invoicing stock and
-        client base suite with data visualization.
-      </p>
-      <p>Important note: the app isn't intended for small screens. </p>
-      <a href="https://github.com/darmar0/iTrade" target="_blank">
-        {"["}Git{"]"}
-      </a>
-      <a href="https://itrade-invoice-app.netlify.app/" target="_blank">
-        {"["}Demo{"]"}
-      </a>
+      {previous === 0 ? (
+        <>
+          <h3>iBuy</h3>
+          <p>
+            Goal was to create an online shop with redux state management , CSS grids and flexbox responsive styling. App state is
+            managed with Redux, and it is persisted in browser local storage.
+          </p>
+          <div className="linkContainer">
+            <div className="links">
+              <a href="https://github.com/darmar0/Responsive-eComerce-Online-Shop" target="_blank">
+                {"["}Git{"]"}
+              </a>
+              <a id="demo " href="https://ibuy-ecomerce-app.netlify.app/" target="_blank">
+                {"["}Demo{"]"}
+              </a>
+            </div>
+            <div className="previousProject" onClick={() => setPrevious(1)}>
+              <p>Previous{">"}</p>
+            </div>
+          </div>
+        </>
+      ) : null}
+      {previous === 1 ? (
+        <>
+          <h3>iTrade</h3>
+          <p>
+            Simple web app that could replace docs like Word, Excel, Numbers, etc., and serve the small business with invoicing stock
+            and client base suite with data visualization.
+          </p>
+          <p>Important note: the app isn't intended for small screens. </p>
+          <div className="linkContainer">
+            <div className="links">
+              <a href="https://github.com/darmar0/iTrade" target="_blank">
+                {"["}Git{"]"}
+              </a>
+              <a href="https://itrade-invoice-app.netlify.app/" target="_blank">
+                {"["}Demo{"]"}
+              </a>
+            </div>
+            <div className="previousProject" onClick={() => setPrevious(0)}>
+              <p>Previous{">"}</p>
+            </div>
+          </div>
+        </>
+      ) : null}
     </>
   );
 };
