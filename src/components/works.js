@@ -7,6 +7,28 @@ const Works = () => {
     <>
       {previous === 0 ? (
         <>
+          <h3>Responsive Weather-App</h3>
+          <p>
+            Using open Weather API, I wanted to recreate the google weather approach of displaying weather with hourly forecast
+            conditions (temperature and precipitation by the hour).
+          </p>
+          <div className="linkContainer">
+            <div className="links">
+              <a href="https://github.com/darmar0/Weather-App" target="_blank">
+                {"["}Git{"]"}
+              </a>
+              <a id="demo " href="https://weather-app-darmar.netlify.app/" target="_blank">
+                {"["}Demo{"]"}
+              </a>
+            </div>
+            <div className="previousProject" onClick={() => setPrevious(1)}>
+              <p>Previous{">"}</p>
+            </div>
+          </div>
+        </>
+      ) : null}
+      {previous === 1 ? (
+        <>
           <h3>iBuy</h3>
           <p>
             Goal was to create an online shop with redux state management , CSS grids and flexbox responsive styling. App state is
@@ -27,7 +49,7 @@ const Works = () => {
           </div>
         </>
       ) : null}
-      {previous === 1 ? (
+      {previous === 2 ? (
         <>
           <h3>iTrade</h3>
           <p>
