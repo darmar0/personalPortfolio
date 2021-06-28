@@ -43,7 +43,7 @@ const Works = () => {
                 {"["}Demo{"]"}
               </a>
             </div>
-            <div className="previousProject" onClick={() => setPrevious(1)}>
+            <div className="previousProject" onClick={() => setPrevious(2)}>
               <p>Previous{">"}</p>
             </div>
           </div>
