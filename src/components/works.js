@@ -11,6 +11,7 @@ const Works = () => {
             <p>
               Tracks and calculate your expenses and incomes. With user authentication (create user/ login), saves all your
               data using DigitalCube API. This app was build both in Angular and React during my first internship experience.
+              App is intended for smaller screens.
             </p>
             <div className="linkContainer">
               <div className="links">
@@ -32,7 +33,7 @@ const Works = () => {
           <h3>Responsive Weather-App</h3>
           <p>
             Using open Weather API, I wanted to recreate the google weather approach of displaying weather with hourly forecast
-            conditions (temperature and precipitation by the hour).
+            conditions (temperature and precipitation by the hour). Built in React.
           </p>
           <div className="linkContainer">
             <div className="links">
@@ -54,7 +55,7 @@ const Works = () => {
           <h3>iBuy</h3>
           <p>
             Goal was to create an online shop with redux state management , CSS grids and flexbox responsive styling. App state is
-            managed with Redux, and it is persisted in browser local storage.
+            managed with Redux, and it is persisted in browser local storage. Built in react.
           </p>
           <div className="linkContainer">
             <div className="links">
@@ -76,7 +77,7 @@ const Works = () => {
           <h3>iTrade</h3>
           <p>
             Simple web app that could replace docs like Word, Excel, Numbers, etc., and serve the small business with invoicing stock
-            and client base suite with data visualization.
+            and client base suite with data visualization. Built in react.
           </p>
           <p>Important note: the app isn't intended for small screens. </p>
           <div className="linkContainer">
