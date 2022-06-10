@@ -6,6 +6,28 @@ const Works = () => {
   return (
     <>
       {previous === 0 ? (
+          <>
+            <h3>Budget App</h3>
+            <p>
+              Tracks and calculate your expenses and incomes. With user authentication (create user/ login), saves all your
+              data using DigitalCube API. This app was build both in Angular and React during my first internship experience.
+            </p>
+            <div className="linkContainer">
+              <div className="links">
+                <a href="https://github.com/darmar0/Budget-app" target="_blank">
+                  {"["}Git{"]"}
+                </a>
+                <a id="demo " href="https://budget-app-react-api.netlify.app/" target="_blank">
+                  {"["}Demo{"]"}
+                </a>
+              </div>
+              <div className="previousProject" onClick={() => setPrevious(1)}>
+                <p>Previous{">"}</p>
+              </div>
+            </div>
+          </>
+      ) : null}
+      {previous === 1 ? (
         <>
           <h3>Responsive Weather-App</h3>
           <p>
@@ -21,13 +43,13 @@ const Works = () => {
                 {"["}Demo{"]"}
               </a>
             </div>
-            <div className="previousProject" onClick={() => setPrevious(1)}>
+            <div className="previousProject" onClick={() => setPrevious(2)}>
               <p>Previous{">"}</p>
             </div>
           </div>
         </>
       ) : null}
-      {previous === 1 ? (
+      {previous === 2 ? (
         <>
           <h3>iBuy</h3>
           <p>
@@ -43,13 +65,13 @@ const Works = () => {
                 {"["}Demo{"]"}
               </a>
             </div>
-            <div className="previousProject" onClick={() => setPrevious(2)}>
+            <div className="previousProject" onClick={() => setPrevious(3)}>
               <p>Previous{">"}</p>
             </div>
           </div>
         </>
       ) : null}
-      {previous === 2 ? (
+      {previous === 3 ? (
         <>
           <h3>iTrade</h3>
           <p>

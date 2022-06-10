@@ -7,7 +7,6 @@ const App = () => {
   const [contentHeight, setHeight] = useState();
 
   const responsive = (containerHeight) => {
-    console.log(containerHeight);
     const height = containerHeight < 110 ? "25%" : "8%";
     setHeight(height);
   };
